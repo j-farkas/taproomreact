@@ -31,10 +31,12 @@ function Produce(props) {
     </div>
   );
 }
-Produce.propTypes = {
-  month: PropTypes.string.isRequired,
-  selection: PropTypes.array.isRequired
+Keg.propTypes = {
+  keg: PropTypes.string.isRequired,
+  sugarContent: PropTypes.number.isRequired,
+  brand: PropTypes.string,
+  price: PropTypes.number.isRequired,
+  pints: PropTypes.number.isRequired
 };
 
 export default Produce;
-
