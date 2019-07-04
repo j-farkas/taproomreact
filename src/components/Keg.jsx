@@ -28,12 +28,17 @@ function Keg(props) {
                 margin-top: 50px;
                 float: right;
               }
+              .Hidden{
+                display:none;
+              }
             `}</style>
-      <button onClick={()=>console.log(this)}className = {props.name}> Sell a pint</button>
+      <span className = {this.location.hash.includes("low") && props.pints > 10 ? 'Hidden' : null }>
+      <button onClick={()=>console.log(this.location)}className = {props.name}> Sell a pint</button>
       <h2>{props.brand} {props.name}</h2>
       <h3>Grams of Sugar {props.sugarContent}</h3>
       <h3> ${props.price}</h3>
       <h3 className = {props.pints < 10 ? 'Low' : null}>{props.pints} pints left</h3>
+      </span>
      </div>
   );
 }
