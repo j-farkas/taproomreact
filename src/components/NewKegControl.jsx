@@ -1,5 +1,5 @@
 import React from 'react';
-import Confirmation from './ConfirmationAdd';
+import Confirmation from './ConfirmAdd';
 import NewKeg from './NewKeg';
 
 class NewKegControl extends React.Component {
@@ -9,7 +9,7 @@ class NewKegControl extends React.Component {
     this.state = {
       formVisibleOnPage: false
     };
-    this.handleConfirmation = this.Confirmation.bind(this);
+    this.handleConfirmation = this.handleConfirmation.bind(this);
   }
 
   handleConfirmation(){
@@ -31,4 +31,4 @@ class NewKegControl extends React.Component {
   }
 }
 
-export default NewTicketControl;
+export default NewKegControl;
