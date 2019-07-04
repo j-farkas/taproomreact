@@ -33,6 +33,7 @@ function Keg(props) {
               }
             `}</style>
       <span className = {this.location.hash.includes('low') && props.pints > 10 ? 'Hidden' : null }>
+        
         <button className = {props.name}> Sell a pint</button>
         <h2>{props.brand} {props.name}</h2>
         <h3>Grams of Sugar {props.sugarContent}</h3>
