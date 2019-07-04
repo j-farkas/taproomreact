@@ -13,7 +13,7 @@ class NewKeg extends React.Component {
   }
 
   handleClick(){
-    console.log('Hey, you clicked me! I do not have code to change my state quite yet, but I will in a moment!');
+    console.log('works');
   }
 
   render(){
