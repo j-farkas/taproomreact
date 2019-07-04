@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Keg(props) {
   return (
-    <div>
+    <div className = {props.sugarContent > 20 ? 'Sugary' : null}>
       <style jsx>{`
                 div {
                     background-color: orange;
@@ -15,11 +15,25 @@ function Keg(props) {
                     font-weight: lighter;
                     text-align: center;
                   }
+              .Sugary{
+                background-color: red;
+              }
+              .Low{
+                font-weight: bold;
+                text-decoration: underline;
+              }
+              button{
+                height: 50px;
+                width: 50px;
+                margin-top: 50px;
+                float: right;
+              }
             `}</style>
+      <button className = {props.name}> Sell a pint</button>
       <h2>{props.brand} {props.name}</h2>
       <h3>Grams of Sugar {props.sugarContent}</h3>
       <h3> ${props.price}</h3>
-      <h3>{props.pints} pints left</h3>
+      <h3 className = {props.pints < 10 ? 'Low' : null}>{props.pints} pints left</h3>
      </div>
   );
 }

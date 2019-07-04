@@ -34,7 +34,7 @@ const availableKegs = [
     name: 'Cola',
     sugarContent: 39,
     brand: 'Pepsi',
-    pints: 124,
+    pints: 4,
     price: 3
   }
 ];
