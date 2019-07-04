@@ -12,6 +12,9 @@ This is an interface for both a patron or employee to interact with a taproom's 
 
 No known bugs
 
+## _Component Structure_
+![](src/assets/img/IMG_20190704_130702.jpg)
+
 ## _Support and contact details_
 
 Contact jaredmfarkas@gmail.com
