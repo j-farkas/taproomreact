@@ -4,9 +4,12 @@ function Confirmation(){
   return (
     <div>
       <p>Are you sure you want to add this keg?</p>
-      <button>Yes</button>
+      <button onClick={props.onConfirmation}>Yes</button>
     </div>
   );
 }
 
+Confirmation.propTypes = {
+  onConfirmation: PropTypes.func
+};
 export default Confirmation;

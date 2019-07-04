@@ -9,12 +9,13 @@ class NewKeg extends React.Component {
     this.state = {
       formVisibleOnPage: false
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleConfirmation = this.handleConfirmation.bind(this);
   }
 
-  handleClick(){
-    console.log('works');
-  }
+  handleConfirmation(){
+     this.setState({formVisibleOnPage: true});
+   }
+
 
   render(){
     return (
@@ -52,7 +53,7 @@ class NewKeg extends React.Component {
             type ='hidden'
             id='pints'
             value='124'/>
-          <button onClick={this.handleClick} type='submit'>Add it</button>
+          <button onClick={this.handleConfirmation} type='submit'>Add it</button>
         </form>
         <Confirmation />
       </div>
