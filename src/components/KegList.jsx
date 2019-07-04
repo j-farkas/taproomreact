@@ -1,7 +1,7 @@
 import React from 'react';
 import Keg from './Keg';
 
-const availableKegs = [
+var availableKegs = [
   {
     name: 'Water',
     sugarContent: 0,
