@@ -2,25 +2,14 @@ import React from 'react';
 import Confirmation from './ConfirmAdd';
 
 
-class NewKeg extends React.Component {
+function NewKeg() {
+  let _name = null;
+  let _brand = null;
+  let _price = null;
+  let _sugarContent = null;
+  let _pints = null;
 
 
-  constructor(props) {
-    let _name = null;
-    let _brand = null;
-    let _price = null;
-    let _sugarContent = null;
-    let _pints = null;
-    super(props);
-    this.state = {
-      formVisibleOnPage: false
-    };
-    this.handleConfirmation = this.handleConfirmation.bind(this);
-  }
-
-  handleConfirmation(){
-     this.setState({formVisibleOnPage: true});
-   }
 
 
 
@@ -29,7 +18,6 @@ class NewKeg extends React.Component {
   }
 
 
-  render(){
     return (
       <div>
         <form onSubmit={handleNewKegSubmit}>
@@ -77,6 +65,5 @@ class NewKeg extends React.Component {
       </div>
     );
   }
-}
 
 export default NewKeg;
