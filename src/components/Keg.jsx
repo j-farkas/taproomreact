@@ -29,8 +29,7 @@ function Keg(props) {
                 float: right;
               }
             `}</style>
-      <button onClick = {() =>
-        props.pints--} className = {props.name}> Sell a pint</button>
+      <button onClick={()=>console.log(this)}className = {props.name}> Sell a pint</button>
       <h2>{props.brand} {props.name}</h2>
       <h3>Grams of Sugar {props.sugarContent}</h3>
       <h3> ${props.price}</h3>
