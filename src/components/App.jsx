@@ -22,7 +22,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={IntroImg} />
         <Route path='/viewkeg' component={KegList} />
-          <Route path='/addkeg' component={NewKeg} />
+        <Route path='/addkeg' component={NewKeg} />
       </Switch>
     </div>
   );

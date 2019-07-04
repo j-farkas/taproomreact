@@ -32,14 +32,14 @@ function Keg(props) {
                 display:none;
               }
             `}</style>
-      <span className = {this.location.hash.includes("low") && props.pints > 10 ? 'Hidden' : null }>
-      <button onClick={()=>console.log(this.location)}className = {props.name}> Sell a pint</button>
-      <h2>{props.brand} {props.name}</h2>
-      <h3>Grams of Sugar {props.sugarContent}</h3>
-      <h3> ${props.price}</h3>
-      <h3 className = {props.pints < 10 ? 'Low' : null}>{props.pints} pints left</h3>
+      <span className = {this.location.hash.includes('low') && props.pints > 10 ? 'Hidden' : null }>
+        <button className = {props.name}> Sell a pint</button>
+        <h2>{props.brand} {props.name}</h2>
+        <h3>Grams of Sugar {props.sugarContent}</h3>
+        <h3> ${props.price}</h3>
+        <h3 className = {props.pints < 10 ? 'Low' : null}>{props.pints} pints left</h3>
       </span>
-     </div>
+    </div>
   );
 }
 Keg.propTypes = {
