@@ -12,16 +12,16 @@ class NewTicketControl extends React.Component {
     this.handleConfirmation = this.Confirmation.bind(this);
   }
 
-  handleTroubleshootingConfirmation(){
+  handleConfirmation(){
     this.setState({formVisibleOnPage: true});
   }
 
   render(){
     let currentlyVisibleContent = null;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <NewTicketForm />;
+      currentlyVisibleContent = <NewKeg />;
     } else {
-      currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation}/>;
+      currentlyVisibleContent = <Confirmation onConfirmation={this.handleConfirmation}/>;
     }
     return (
       <div>

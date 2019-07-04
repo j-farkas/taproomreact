@@ -47,23 +47,23 @@ function NewKeg() {
           <input
             type ='number'
             id='price'
-            placeholder='The Price per pint'/>
+            placeholder='The Price per pint'
             ref={(input) => {_price = input;}}/>
           <input
             type ='number'
             id='sugarContent'
-            placeholder='The sugar content per pint'/>
+            placeholder='The sugar content per pint'
             ref={(input) => {_sugarContent = input;}}/>
           <input
             type ='hidden'
             id='pints'
-            value='124'/>
+            value='124'
             ref={(input) => {_pints = input;}}/>
           <button onClick={this.handleConfirmation} type='submit'>Add it</button>
         </form>
-        <Confirmation />
       </div>
     );
+
   }
 
 export default NewKeg;
