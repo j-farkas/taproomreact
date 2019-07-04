@@ -29,7 +29,8 @@ function Keg(props) {
                 float: right;
               }
             `}</style>
-      <button className = {props.name}> Sell a pint</button>
+      <button onClick = {() =>
+        props.pints--} className = {props.name}> Sell a pint</button>
       <h2>{props.brand} {props.name}</h2>
       <h3>Grams of Sugar {props.sugarContent}</h3>
       <h3> ${props.price}</h3>
@@ -44,5 +45,7 @@ Keg.propTypes = {
   price: PropTypes.number.isRequired,
   pints: PropTypes.number.isRequired
 };
+
+
 
 export default Keg;

@@ -1,9 +1,7 @@
 import React from 'react';
-import Schedule from './Schedule';
 import Header from './Header';
 import KegList from './KegList';
 import { Switch, Route } from 'react-router-dom';
-import About from './About';
 import IntroImg from './IntroImg';
 
 function App() {
