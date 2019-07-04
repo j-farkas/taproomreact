@@ -1,8 +1,8 @@
 import React from 'react';
 import Confirmation from './ConfirmationAdd';
-import NewTicketForm from './NewTicketForm';
+import NewKeg from './NewKeg';
 
-class NewTicketControl extends React.Component {
+class NewKegControl extends React.Component {
 
   constructor(props) {
     super(props);

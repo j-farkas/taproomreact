@@ -15,6 +15,15 @@ function NewKeg() {
 
    function handleNewKegSubmit(event) {
     event.preventDefault();
+    console.log(_name.value);
+    console.log(_brand.value);
+    console.log(_price.value);
+    console.log(_sugarContent.value);
+    console.log(_pints.value);
+    _name.value = '';
+    _brand.value = '';
+    _price.value = '';
+    _sugarContent.value ='';
   }
 
 
