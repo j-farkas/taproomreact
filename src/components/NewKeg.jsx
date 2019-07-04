@@ -33,16 +33,15 @@ function NewKeg() {
 
                     }
                 `}</style>
-        <form>
           <input
             type='text'
             id='name'
-            placeholder='Drink Name'/>
+            placeholder='Drink Name'
             ref={(input) => {_name = input;}}/>
           <input
             type='text'
             id='brand'
-            placeholder='Brand Name'/>
+            placeholder='Brand Name'
             ref={(input) => {_brand = input;}}/>
           <input
             type ='number'
