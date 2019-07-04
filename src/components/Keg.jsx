@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Keg(props) {
+
   return (
     <div className = {props.sugarContent > 20 ? 'Sugary' : null}>
       <style jsx>{`
@@ -11,10 +12,18 @@ function Keg(props) {
                 }
 
                 div h3 {
-                    padding-left: 1em;
+                    padding-left: 2em;
                     font-weight: lighter;
                     text-align: center;
+                    margin-left: 10px;
                   }
+                  div h2 {
+                      padding-left: 2em;
+                      font-weight: lighter;
+                      text-align: center;
+                      margin-left: 50px;
+                      font-weight: bold;
+                    }
               .Sugary{
                 background-color: red;
               }
@@ -23,10 +32,13 @@ function Keg(props) {
                 text-decoration: underline;
               }
               button{
-                height: 50px;
+                height: auto;
                 width: 50px;
                 margin-top: 50px;
                 float: right;
+              }
+              *.edit{
+                float: left;
               }
               .Hidden{
                 display:none;
@@ -34,9 +46,9 @@ function Keg(props) {
             `}</style>
       <span className = {this.location.hash.includes('low') && props.pints > 10 ? 'Hidden' : null }>
         <button className = {props.name}> Sell a pint</button>
+        <button className = '"edit " + {props.name}'> Edit Keg</button>
         <h2>{props.brand} {props.name}</h2>
-        <h3>Grams of Sugar {props.sugarContent}</h3>
-        <h3> ${props.price}</h3>
+        <h3> Price: ${props.price} | Grams of Sugar {props.sugarContent}</h3>
         <h3 className = {props.pints < 10 ? 'Low' : null}>{props.pints} pints left</h3>
       </span>
     </div>
