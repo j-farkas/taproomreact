@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Confirmation(){
+function Confirmation(props){
   return (
     <div>
       <p>Are you sure you want to add this keg?</p>
