@@ -1,7 +1,7 @@
 import React from 'react';
 import Schedule from './Schedule';
 import Header from './Header';
-import KegList from './SeasonalProduce';
+import KegList from './KegList';
 import { Switch, Route } from 'react-router-dom';
 import About from './About';
 import IntroImg from './IntroImg';
@@ -22,9 +22,7 @@ function App() {
         `}</style>
       <Switch>
         <Route exact path='/' component={IntroImg} />
-        <Route path='/schedule' component={Schedule} />
         <Route path='/viewkeg' component={KegList} />
-        <Route path='/about' component={About} />
       </Switch>
     </div>
   );

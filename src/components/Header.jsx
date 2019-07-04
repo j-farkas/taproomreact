@@ -15,8 +15,8 @@ function Header(){
           max-width: 100%;
         }
         `}</style>
-      <h1>Tha Dopest Farmer's Market</h1>
-      <Link to="/">Home</Link> | <Link to="/schedule">Schedule</Link> | <Link to="/seasonal-produce">Seasonal Produce</Link> | <Link to="/about">About</Link>
+      <h1>It's a tap room</h1>
+      <Link to="/">Home</Link> | <Link to="/viewkeg">Keg List</Link>
     </div>
   );
 }

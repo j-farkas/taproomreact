@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Produce(props) {
+function Keg(props) {
   return (
     <div>
       <style jsx>{`
@@ -16,27 +16,19 @@ function Produce(props) {
                     text-align: center;
                   }
             `}</style>
-      <h2>{props.month}</h2>
-      <h3>
-        {props.selection.map((item, index) => {
-          if (index === props.selection.length - 1) {
-            return <span>{item}.</span>;
-          } else {
-            return <span>{item}, </span>;
-          }
-        }
-        )}
-      </h3>
-
-    </div>
+      <h2>{props.brand} {props.name}</h2>
+      <h3>Grams of Sugar {props.sugarContent}</h3>
+      <h3> ${props.price}</h3>
+      <h3>{props.pints} pints left</h3>
+     </div>
   );
 }
 Keg.propTypes = {
-  keg: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   sugarContent: PropTypes.number.isRequired,
   brand: PropTypes.string,
   price: PropTypes.number.isRequired,
   pints: PropTypes.number.isRequired
 };
 
-export default Produce;
+export default Keg;

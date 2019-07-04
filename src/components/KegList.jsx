@@ -36,10 +36,10 @@ const availableKegs = [
     brand: 'Pepsi',
     pints: 124,
     price: 3
-  },
+  }
 ];
 
-function SeasonalProduce() {
+function KegList() {
   return (
     <div>
       {availableKegs.map((keg, index) =>
