@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './Header';
 import KegList from './KegList';
-import LowKegs from './LowKegs';
 import { Switch, Route } from 'react-router-dom';
 import IntroImg from './IntroImg';
 
@@ -22,7 +21,6 @@ function App() {
       <Switch>
         <Route exact path='/' component={IntroImg} />
         <Route path='/viewkeg' component={KegList} />
-          // <Route path='/lowkegs' component={LowKegs} />
       </Switch>
     </div>
   );
