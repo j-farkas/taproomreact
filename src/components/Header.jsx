@@ -10,7 +10,6 @@ function Header(){
           text-align: center;
           text-transform: uppercase;
         }
-        
         img {
           max-width: 100%;
         }

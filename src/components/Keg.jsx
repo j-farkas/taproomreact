@@ -17,7 +17,6 @@ export default function Keg(props) {
               div h3 {
                   font-weight: lighter;
                   text-align: center;
-
               }
               h2 {
                   font-weight: lighter;
