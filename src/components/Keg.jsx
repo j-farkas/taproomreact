@@ -10,7 +10,9 @@ export default function Keg(props) {
               div {
                   background-color: orange;
                   font-family: Arial, Helvetica, sans-serif;
-                  border: black solid 1px 1px 0px 0px;
+                  border-top: black solid 1px;
+                  border-right: black solid 1px;
+                  border-left: black solid 1px;
               }
               div h3 {
                   font-weight: lighter;
@@ -44,12 +46,12 @@ export default function Keg(props) {
             `}</style>
       {props.availableKegs.map((keg, index) =>
         <span className = {window.location.href.split('/')[5] === ('low') && keg.pints > 10 ? 'Hidden' : null }>
-          <Link to={'/viewkeg/'+index}> Edit Keg</Link>
           <div className = {keg.sugarContent > 20 ? 'Sugary' : null}>
             <button onClick={() => props.sellPint(index)}> Sell a pint</button>
             <h2>{keg.brand} {keg.name} </h2>
             <h3> Price: ${keg.price} | Grams of Sugar {keg.sugarContent}</h3>
             <h3 className = {keg.pints < 10 ? 'Low' : null}>{keg.pints} pints remaining</h3>
+            <Link to={'/viewkeg/'+index}> Edit Keg</Link>
           </div>
         </span>
       )}
