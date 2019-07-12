@@ -6,7 +6,7 @@ class NewKegControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisibleOnPage: false,
+      low: false,
       availableKegs: [
         {
           name: 'Water',
