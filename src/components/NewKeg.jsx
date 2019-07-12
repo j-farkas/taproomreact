@@ -15,7 +15,11 @@ function NewKeg(props) {
 
   function handleNewKegSubmit(event) {
     event.preventDefault();
-    props.addKeg({name: _name.value, brand: _brand.value, price: _price.value, sugarContent: _sugarContent.value, pints: _pints.value})
+    if(window.location.href.split('/').length > 5){
+      props.editKeg({name: _name.value, brand: _brand.value, price: _price.value, sugarContent: _sugarContent.value, pints: _pints.value}, parseInt(window.location.href.split('/')[5]))
+    }else{
+      props.addKeg({name: _name.value, brand: _brand.value, price: _price.value, sugarContent: _sugarContent.value, pints: _pints.value})
+    }
     _name.value = '';
     _brand.value = '';
     _price.value = '';
@@ -71,7 +75,8 @@ function NewKeg(props) {
 }
 
 NewKeg.propTypes = {
-  addKeg: PropTypes.func
+  addKeg: PropTypes.func,
+  editKeg: PropTypes.func
 };
 
 export default NewKeg;

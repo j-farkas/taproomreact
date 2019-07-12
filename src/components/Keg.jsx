@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export default function Keg(props) {
 
@@ -48,7 +49,7 @@ export default function Keg(props) {
             <div className = {keg.sugarContent > 20 ? 'Sugary' : null}>
       <span className = {window.location.href.split('/')[5] === ('low') && keg.pints > 10 ? 'Hidden' : null }>
         <button onClick={() => props.sellPint(index)}> Sell a pint</button>
-        <button className = '"edit " + {props.name}'> Edit Keg</button>
+        <Link to={'/viewkeg/'+index}> Edit Keg</Link>
         <h2>{keg.brand} {keg.name} </h2>
         <h3> Price: ${keg.price} | Grams of Sugar {keg.sugarContent}</h3>
         <h3 className = {keg.pints < 10 ? 'Low' : null}>{keg.pints} pints left</h3>

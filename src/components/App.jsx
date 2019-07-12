@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './Header';
-import KegList from './KegList';
 import NewKegControl from './NewKegControl';
 import { Switch, Route } from 'react-router-dom';
 import IntroImg from './IntroImg';
