@@ -47,10 +47,15 @@ function NewKeg(props) {
                         width: 150px;
                         font-family: Arial, Helvetica, sans-serif;
                     }
+                    div{
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    }
                     button{
                       width: 80px;
                       height: auto;
-
+                      margin-left: 275px;
                     }
                 `}</style>
         <input
