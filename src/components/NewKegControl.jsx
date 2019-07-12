@@ -71,11 +71,14 @@ class NewKegControl extends React.Component {
   }
 
   render(){
-    if(window.location.href.split('/')[5] === 'new' || window.location.href.split('/').length > 5){
-      return(
-        <NewKeg addKeg={this.addKeg} editKeg={this.editKeg} availableKegs={this.state.availableKegs}/>
-      );
+    if(window.location.href.split('/').length > 5){
+      if(window.location.href.split('/')[5] === 'new' || window.location.href.split('/')[5] !== 'low'){
+        return(
+          <NewKeg addKeg={this.addKeg} editKeg={this.editKeg} availableKegs={this.state.availableKegs}/>
+        );
+      }
     }
+
     return(
       <div>
         <Keg availableKegs={this.state.availableKegs} sellPint={this.sellPint}/>
