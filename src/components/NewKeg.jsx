@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-function NewKeg() {
+function NewKeg(props) {
   let _name = null;
   let _brand = null;
   let _price = null;
@@ -15,11 +15,7 @@ function NewKeg() {
 
   function handleNewKegSubmit(event) {
     event.preventDefault();
-    console.log(_name.value);
-    console.log(_brand.value);
-    console.log(_price.value);
-    console.log(_sugarContent.value);
-    console.log(_pints.value);
+    props.addKeg({name: _name.value, brand: _brand.value, price: _price.value, sugarContent: _sugarContent.value, pints: 124})
     _name.value = '';
     _brand.value = '';
     _price.value = '';
@@ -73,5 +69,9 @@ function NewKeg() {
   );
 
 }
+
+NewKeg.propTypes = {
+  addKeg: PropTypes.func
+};
 
 export default NewKeg;

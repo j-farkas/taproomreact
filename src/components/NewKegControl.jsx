@@ -46,6 +46,7 @@ class NewKegControl extends React.Component {
       ]
     }
      this.sellPint = this.sellPint.bind(this);
+     this.addKeg = this.addKeg.bind(this);
   }
 
   sellPint(id){
@@ -53,10 +54,15 @@ class NewKegControl extends React.Component {
     this.setState(this.state.availableKegs);
   }
 
+  addKeg(keg){
+    this.state.availableKegs.push(keg);
+    this.setState(this.state.availableKegs);
+  }
+
   render(){
     if(window.location.href.split('/')[5] === 'new'){
       return(
-        <NewKeg/>
+        <NewKeg addKeg={this.addKeg}/>
       )
     }
     return(
