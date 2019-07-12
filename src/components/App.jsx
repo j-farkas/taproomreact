@@ -3,6 +3,7 @@ import Header from './Header';
 import NewKegControl from './NewKegControl';
 import { Switch, Route } from 'react-router-dom';
 import IntroImg from './IntroImg';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route exact path='/' component={IntroImg} />
         <Route path='/viewkeg' component={NewKegControl} />
       </Switch>
+      <Footer />
     </div>
   );
 }

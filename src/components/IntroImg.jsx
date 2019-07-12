@@ -9,7 +9,6 @@ function IntroImg() {
                 img {
                     max-width: 100%;
                 }
-
             `}</style>
       <img src={stockPhoto} alt=""/>
     </div>
