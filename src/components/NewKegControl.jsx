@@ -1,5 +1,6 @@
 import React from 'react';
 import Keg from './Keg';
+import NewKeg from './NewKeg';
 
 class NewKegControl extends React.Component {
 
@@ -53,22 +54,16 @@ class NewKegControl extends React.Component {
   }
 
   render(){
+    if(window.location.href.split('/')[5] === 'new'){
+      return(
+        <NewKeg/>
+      )
+    }
     return(
-    // let currentlyVisibleContent = null;
-    // if (this.state.formVisibleOnPage){
-    //   currentlyVisibleContent = <NewKeg />;
-    // } else {
-    //   currentlyVisibleContent = <Confirmation onConfirmation={this.handleConfirmation}/>;
-    // }
-    // return (
-    //   <div>
-    //     {currentlyVisibleContent}
-    //   </div>
-  <div>
-    <Keg availableKegs={this.state.availableKegs} sellPint={this.sellPint}/>
-  </div>
+        <div>
+          <Keg availableKegs={this.state.availableKegs} sellPint={this.sellPint}/>
+        </div>
 )
-    // );
   }
 }
 

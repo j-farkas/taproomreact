@@ -16,7 +16,7 @@ function Header(){
         }
         `}</style>
       <h1>It's a tap room</h1>
-      <Link to="/">Home</Link> | <Link to="/viewkeg">Keg List</Link> | <Link to="/viewkeg/low">Low Kegs</Link> | <Link to="/addkeg">Add a Keg</Link>
+      <Link to="/">Home</Link> | <Link to="/viewkeg">Keg List</Link> | <Link to="/viewkeg/low">Low Kegs</Link> | <Link to="/viewkeg/new">Add a Keg</Link>
     </div>
   );
 }
