@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 function Keg(props) {
 
   return (
-    <div className = {props.sugarContent > 20 ? 'Sugary' : null}>
+    {props.availableKegs.map((keg, index) =>
+    <div className = {keg.sugarContent > 20 ? 'Sugary' : null}>
       <style jsx>{`
                 div {
                     background-color: orange;
@@ -45,22 +46,28 @@ function Keg(props) {
               }
             `}</style>
       <span className = {this.location.hash.includes('low') && props.pints > 10 ? 'Hidden' : null }>
-        <button className = {props.name}> Sell a pint</button>
+        <button className = {keg.name}> Sell a pint</button>
         <button className = '"edit " + {props.name}'> Edit Keg</button>
-        <h2>{props.brand} {props.name}</h2>
-        <h3> Price: ${props.price} | Grams of Sugar {props.sugarContent}</h3>
-        <h3 className = {props.pints < 10 ? 'Low' : null}>{props.pints} pints left</h3>
+        <h2>{props.brand} {keg.name}</h2>
+        <h3> Price: ${keg.price} | Grams of Sugar {props.sugarContent}</h3>
+        <h3 className = {keg.pints < 10 ? 'Low' : null}>{props.pints} pints left</h3>
       </span>
     </div>
+  )}
   );
 }
+
 Keg.propTypes = {
-  name: PropTypes.string.isRequired,
-  sugarContent: PropTypes.number.isRequired,
-  brand: PropTypes.string,
-  price: PropTypes.number.isRequired,
-  pints: PropTypes.number.isRequired
-};
+  availableKegs: PropTypes.array
+}
+//
+// Keg.propTypes = {
+//   name: PropTypes.string.isRequired,
+//   sugarContent: PropTypes.number.isRequired,
+//   brand: PropTypes.string,
+//   price: PropTypes.number.isRequired,
+//   pints: PropTypes.number.isRequired
+// };
 
 
 
