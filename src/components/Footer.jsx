@@ -8,9 +8,11 @@ function Footer(){
           font-family: Arial, Helvetica, sans-serif;
           text-align: center;
           text-transform: uppercase;
+          font-size: 24px;
         }
         `}</style>
-      <h6>Taproom!</h6>
+      <h4>Taproom!🦑</h4>
+      <h4>🍹🍹🍹🍹🍹🍹</h4>
     </div>
   );
 }
