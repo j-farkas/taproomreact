@@ -53,6 +53,7 @@ class NewKegControl extends React.Component {
   // }
 
   render(){
+    return(
     // let currentlyVisibleContent = null;
     // if (this.state.formVisibleOnPage){
     //   currentlyVisibleContent = <NewKeg />;
@@ -63,7 +64,10 @@ class NewKegControl extends React.Component {
     //   <div>
     //     {currentlyVisibleContent}
     //   </div>
+  <div>
     <Keg availableKegs={this.state.availableKegs}/>
+  </div>
+)
     // );
   }
 }
