@@ -7,24 +7,21 @@ export default function Keg(props) {
   return (
     <div className = 'outer'>
       <style jsx>{`
-                div {
-                    background-color: orange;
-                    font-family: Arial, Helvetica, sans-serif;
-                    border: black solid 1px;
-                }
-                div h3 {
-                    padding-left: 2em;
-                    font-weight: lighter;
-                    text-align: center;
+              div {
+                  background-color: orange;
+                  font-family: Arial, Helvetica, sans-serif;
+                  border: black solid 1px 1px 0px 0px;
+              }
+              div h3 {
+                  font-weight: lighter;
+                  text-align: center;
 
-                  }
-                  div h2 {
-                      padding-left: 2em;
-                      font-weight: lighter;
-                      text-align: center;
-
-                      font-weight: bold;
-                    }
+              }
+              h2 {
+                  font-weight: lighter;
+                  text-align: center;
+                  font-weight: bold;
+              }
               .Sugary{
                 background-color: red;
               }
@@ -41,19 +38,15 @@ export default function Keg(props) {
                 margin-top: 50px;
                 float: right;
               }
-
-              *.edit{
-                float: left;
-              }
               *.Hidden{
                 display:none;
               }
             `}</style>
       {props.availableKegs.map((keg, index) =>
         <span className = {window.location.href.split('/')[5] === ('low') && keg.pints > 10 ? 'Hidden' : null }>
+          <Link to={'/viewkeg/'+index}> Edit Keg</Link>
         <div className = {keg.sugarContent > 20 ? 'Sugary' : null}>
             <button onClick={() => props.sellPint(index)}> Sell a pint</button>
-            <Link className = 'edit' to={'/viewkeg/'+index}> Edit Keg</Link>
             <h2>{keg.brand} {keg.name} </h2>
             <h3> Price: ${keg.price} | Grams of Sugar {keg.sugarContent}</h3>
             <h3 className = {keg.pints < 10 ? 'Low' : null}>{keg.pints} pints remaining</h3>
