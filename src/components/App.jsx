@@ -8,8 +8,6 @@ function App() {
   return (
     <div>
       <Header />
-
-
       <style global jsx>{`
         h2 {
           text-align: center;
