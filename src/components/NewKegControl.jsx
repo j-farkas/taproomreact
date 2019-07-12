@@ -1,14 +1,13 @@
 import React from 'react';
-import Confirmation from './ConfirmAdd';
-import NewKeg from './NewKeg';
+import Keg from './Keg';
 
 class NewKegControl extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      formVisibleOnPage: false
-      availableKegs = [
+      formVisibleOnPage: false,
+      availableKegs: [
         {
           name: 'Water',
           sugarContent: 0,
@@ -44,14 +43,14 @@ class NewKegControl extends React.Component {
           pints: 4,
           price: 3
         }
-      ];
-    };
-    this.handleConfirmation = this.handleConfirmation.bind(this);
+      ]
+    }
+    // this.handleConfirmation = this.handleConfirmation.bind(this);
   }
 
-  handleConfirmation(){
-    this.setState({formVisibleOnPage: true});
-  }
+  // handleConfirmation(){
+  //   this.setState({formVisibleOnPage: true});
+  // }
 
   render(){
     // let currentlyVisibleContent = null;
@@ -65,7 +64,7 @@ class NewKegControl extends React.Component {
     //     {currentlyVisibleContent}
     //   </div>
     <Keg availableKegs={this.state.availableKegs}/>
-    );
+    // );
   }
 }
 

@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Keg(props) {
+export default function Keg(props) {
 
   return (
-    {props.availableKegs.map((keg, index) =>
     <div className = {keg.sugarContent > 20 ? 'Sugary' : null}>
       <style jsx>{`
                 div {
@@ -45,21 +44,22 @@ function Keg(props) {
                 display:none;
               }
             `}</style>
-      <span className = {this.location.hash.includes('low') && props.pints > 10 ? 'Hidden' : null }>
-        <button className = {keg.name}> Sell a pint</button>
-        <button className = '"edit " + {props.name}'> Edit Keg</button>
-        <h2>{props.brand} {keg.name}</h2>
-        <h3> Price: ${keg.price} | Grams of Sugar {props.sugarContent}</h3>
-        <h3 className = {keg.pints < 10 ? 'Low' : null}>{props.pints} pints left</h3>
-      </span>
+    //       {props.availableKegs.map((keg, index) =>
+    //   <span className = {this.location.hash.includes('low') && props.pints > 10 ? 'Hidden' : null }>
+    //     <button className = {keg.name}> Sell a pint</button>
+    //     <button className = '"edit " + {props.name}'> Edit Keg</button>
+    //     <h2>{props.brand} {keg.name}</h2>
+    //     <h3> Price: ${keg.price} | Grams of Sugar {props.sugarContent}</h3>
+    //     <h3 className = {keg.pints < 10 ? 'Low' : null}>{props.pints} pints left</h3>
+    //   </span>
+    // )}
     </div>
-  )}
-  );
+  )
 }
 
 Keg.propTypes = {
   availableKegs: PropTypes.array
-}
+};
 //
 // Keg.propTypes = {
 //   name: PropTypes.string.isRequired,
@@ -71,4 +71,4 @@ Keg.propTypes = {
 
 
 
-export default Keg;
+// export default Keg;
