@@ -47,7 +47,7 @@ export default function Keg(props) {
           {props.availableKegs.map((keg, index) =>
             <div className = {keg.sugarContent > 20 ? 'Sugary' : null}>
       <span className = {window.location.href.split('/')[5] === ('low') && keg.pints > 10 ? 'Hidden' : null }>
-        <button className = {keg.name}> Sell a pint</button>
+        <button onClick={() => props.sellPint(index)}> Sell a pint</button>
         <button className = '"edit " + {props.name}'> Edit Keg</button>
         <h2>{keg.brand} {keg.name} </h2>
         <h3> Price: ${keg.price} | Grams of Sugar {keg.sugarContent}</h3>
@@ -60,7 +60,8 @@ export default function Keg(props) {
 }
 
 Keg.propTypes = {
-  availableKegs: PropTypes.array
+  availableKegs: PropTypes.array,
+  sellPint: PropTypes.func
 };
 //
 // Keg.propTypes = {

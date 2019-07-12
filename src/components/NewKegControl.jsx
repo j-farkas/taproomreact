@@ -6,7 +6,6 @@ class NewKegControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      low: false,
       availableKegs: [
         {
           name: 'Water',
@@ -26,7 +25,7 @@ class NewKegControl extends React.Component {
           name: 'Cola',
           sugarContent: 40,
           brand: 'Coca-Cola',
-          pints: 124,
+          pints: 24,
           price: 3
         },
         {
@@ -45,12 +44,13 @@ class NewKegControl extends React.Component {
         }
       ]
     }
-    // this.handleConfirmation = this.handleConfirmation.bind(this);
+     this.sellPint = this.sellPint.bind(this);
   }
 
-  // handleConfirmation(){
-  //   this.setState({formVisibleOnPage: true});
-  // }
+  sellPint(id){
+    this.state.availableKegs[id].pints -= 1;
+    this.setState(this.state.availableKegs);
+  }
 
   render(){
     return(
@@ -65,7 +65,7 @@ class NewKegControl extends React.Component {
     //     {currentlyVisibleContent}
     //   </div>
   <div>
-    <Keg availableKegs={this.state.availableKegs}/>
+    <Keg availableKegs={this.state.availableKegs} sellPint={this.sellPint}/>
   </div>
 )
     // );
