@@ -13,7 +13,7 @@ This is an interface for both a patron or employee to interact with a taproom's 
 No known bugs
 
 ## _Component Structure_
-![](src/assets/img/IMG_20190704_130702.jpg)
+![](src/assets/img/Screen Shot 2019-07-12 at 8.19.32 AM.png)
 
 ## _Support and contact details_
 
