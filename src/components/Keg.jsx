@@ -11,7 +11,6 @@ export default function Keg(props) {
                     font-family: Arial, Helvetica, sans-serif;
                     border:1px black solid;
                 }
-
                 div h3 {
                     padding-left: 2em;
                     font-weight: lighter;
@@ -46,6 +45,7 @@ export default function Keg(props) {
               }
             `}</style>
           {props.availableKegs.map((keg, index) =>
+            <div className = {keg.sugarContent > 20 ? 'Sugary' : null}>
       <span className = {window.location.href.split('/')[5] === ('low') && keg.pints > 10 ? 'Hidden' : null }>
         <button className = {keg.name}> Sell a pint</button>
         <button className = '"edit " + {props.name}'> Edit Keg</button>
@@ -53,6 +53,7 @@ export default function Keg(props) {
         <h3> Price: ${keg.price} | Grams of Sugar {keg.sugarContent}</h3>
         <h3 className = {keg.pints < 10 ? 'Low' : null}>{keg.pints} pints left</h3>
       </span>
+    </div>
     )}
 </div>
   )
