@@ -51,6 +51,9 @@ class NewKegControl extends React.Component {
 
   sellPint(id){
     this.state.availableKegs[id].pints -= 1;
+    if(this.state.availableKegs[id].pints === 0){
+      this.state.availableKegs = this.state.availableKegs.filter(x=>this.state.availableKegs.indexOf(x) !== id)
+    }
     this.setState(this.state.availableKegs);
   }
 

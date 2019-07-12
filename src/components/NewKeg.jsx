@@ -15,7 +15,7 @@ function NewKeg(props) {
 
   function handleNewKegSubmit(event) {
     event.preventDefault();
-    props.addKeg({name: _name.value, brand: _brand.value, price: _price.value, sugarContent: _sugarContent.value, pints: 124})
+    props.addKeg({name: _name.value, brand: _brand.value, price: _price.value, sugarContent: _sugarContent.value, pints: _pints.value})
     _name.value = '';
     _brand.value = '';
     _price.value = '';
