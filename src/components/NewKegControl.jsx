@@ -44,16 +44,16 @@ class NewKegControl extends React.Component {
           price: 3
         }
       ]
-    }
-     this.sellPint = this.sellPint.bind(this);
-     this.addKeg = this.addKeg.bind(this);
-     this.editKeg = this.editKeg.bind(this);
+    };
+    this.sellPint = this.sellPint.bind(this);
+    this.addKeg = this.addKeg.bind(this);
+    this.editKeg = this.editKeg.bind(this);
   }
 
   sellPint(id){
     this.state.availableKegs[id].pints -= 1;
     if(this.state.availableKegs[id].pints === 0){
-      this.state.availableKegs = this.state.availableKegs.filter(x=>this.state.availableKegs.indexOf(x) !== id)
+      this.state.availableKegs = this.state.availableKegs.filter(x=>this.state.availableKegs.indexOf(x) !== id);
     }
     this.setState(this.state.availableKegs);
   }
@@ -65,8 +65,8 @@ class NewKegControl extends React.Component {
 
   editKeg(keg, location){
     Object.keys(keg).forEach((el)=>{
-      this.state.availableKegs[location][el] = keg[el]
-    })
+      this.state.availableKegs[location][el] = keg[el];
+    });
     this.setState(this.state.availableKegs);
   }
 
@@ -74,13 +74,13 @@ class NewKegControl extends React.Component {
     if(window.location.href.split('/')[5] === 'new' || window.location.href.split('/').length > 5){
       return(
         <NewKeg addKeg={this.addKeg} editKeg={this.editKeg} availableKegs={this.state.availableKegs}/>
-      )
+      );
     }
     return(
-        <div>
-          <Keg availableKegs={this.state.availableKegs} sellPint={this.sellPint}/>
-        </div>
-)
+      <div>
+        <Keg availableKegs={this.state.availableKegs} sellPint={this.sellPint}/>
+      </div>
+    );
   }
 }
 

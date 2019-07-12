@@ -13,7 +13,7 @@ function NewKeg(props) {
   let price = '';
   let sugar = '';
   if(window.location.href.split('/')[5] !== 'new'){
-    let loc = window.location.href.split('/')[5]
+    let loc = window.location.href.split('/')[5];
     drinkName = props.availableKegs[loc].name;
     price = props.availableKegs[loc].price;
     sugar = props.availableKegs[loc].sugarContent;
@@ -27,9 +27,9 @@ function NewKeg(props) {
   function handleNewKegSubmit(event) {
     event.preventDefault();
     if(window.location.href.split('/').length > 5){
-      props.editKeg({name: _name.value, brand: _brand.value, price: _price.value, sugarContent: _sugarContent.value, pints: _pints.value}, parseInt(window.location.href.split('/')[5]))
+      props.editKeg({name: _name.value, brand: _brand.value, price: _price.value, sugarContent: _sugarContent.value, pints: _pints.value}, parseInt(window.location.href.split('/')[5]));
     }else{
-      props.addKeg({name: _name.value, brand: _brand.value, price: _price.value, sugarContent: _sugarContent.value, pints: _pints.value})
+      props.addKeg({name: _name.value, brand: _brand.value, price: _price.value, sugarContent: _sugarContent.value, pints: _pints.value});
     }
     _name.value = '';
     _brand.value = '';
