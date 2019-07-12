@@ -73,7 +73,7 @@ class NewKegControl extends React.Component {
   render(){
     if(window.location.href.split('/')[5] === 'new' || window.location.href.split('/').length > 5){
       return(
-        <NewKeg addKeg={this.addKeg} editKeg={this.editKeg}/>
+        <NewKeg addKeg={this.addKeg} editKeg={this.editKeg} availableKegs={this.state.availableKegs}/>
       )
     }
     return(
